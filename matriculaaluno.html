@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!---icones-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <!---jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
+    <!---css-->
+    <link rel="stylesheet" href="style/style.css">
+    
+    <title>WEB SYSTEM</title>
+</head>
+<body>
+    <section>
+        <aside class="conteudolateral">
+            <nav class="menulateral"><span class="material-symbols-outlined">
+                close</span>
+                <ul>
+                    <li><a href="" class="aluno">Aluno</a><span class="material-symbols-outlined">
+                        arrow_right
+                        </span>
+                        <ul class="itensAluno">  
+                            <li><a href="matriculaaluno.html">Matricular Aluno</a></li>
+                            <li><a href="painel.html">Transferir Aluno</a></li>
+                            <li><a href="">Arquivo</a></li>
+                        </ul> 
+                    </li>
+                    <li><a href="" class="escola">Instituição</a><span class="material-symbols-outlined">
+                        arrow_right </span>
+                        <ul class="itensEscola">  
+                            <li><a href="matriculaaluno.html">Censo Escolar</a></li>
+                            <li><a href="">Programas</a></li>
+                        </ul> 
+                    </li>    
+                </ul>
+                <form action="login.html">
+                    <button type="submit">Logout</button>
+                </form>
+            </nav>
+        </aside>
+        <script type="text/javascript" src="javascript/script.js"></script>
+        <article class="matriculaaluno">
+            <div class="cabecalho">
+                <h2>Formulário de Matricula</h2>
+            </div>
+            <div class="corpo">
+                <form  name="matriculaaluno" method="post" action="aula41.html">
+                    <fieldset>
+                        <label>CPF *</label>
+                        <input type="number" name="cpf_aluno" placeholder="ex: XXXXXXXXX-XX" required>
+                        <label>Data de Nascimento *</label>
+                        <input type="date" name="nasc_aluno" required>
+                        <button type="button">Validar</button>
+                    </fieldset>
+                    <div class="corpo-aluno">
+                        <h3>Identificação</h3>
+                        <div class="sexo_aluno">
+                            <label>Aluno</label><br>
+                            <input class="campo" type="text" name="nome_aluno"><br><br>
+                            <label>Sexo:</label>
+                            <input type="radio" name="sexo_aluno" value="M">Masculino
+                            <input type="radio" name="sexo_aluno" value="F">Feminino
+                            <label>Orientação Sexual:</label>
+                            <select name="orientacao_sexual">
+                                <option value="homem_cis">Homem</option>
+                                <option value="mulher_cis">Mulher</option>
+                                <option value="homem_trans">Homem trans</option>
+                                <option value="mulher_trans">Mulher trans</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="corpo-alunofamilia">
+                            <label>Mãe</label>
+                            <input class="campo" type="text" name="nome_mae">
+                            <input type="checkbox" name="m_naodeclarado">Não Declarado
+                            <label>CPF da Mãe</label>
+                            <input class="campo" type="number" name="cpf_mae" placeholder="ex: XXXXXXXXX-XX" >
+                            <label>RG da Mãe</label>
+                            <input class="campo" type="number" name="rg_mae" placeholder="ex: XXXXXXXXX-XX" >
+                            <label>Pai</label>
+                            <input class="campo" type="text" name="nome_pai">
+                            <input type="checkbox" name="p_naodeclarado">Não Declarado
+                            <label>CPF do Pai</label>
+                            <input class="campo" type="number" name="cpf_pai" placeholder="ex: XXXXXXXXX-XX" >
+                            <label>RG do Pai</label>
+                            <input class="campo" class="inp-aluno" type="number" name="rg_pai" placeholder="ex: XXXXXXXXX-XX" >
+                        </div>
+                    </div>
+                    <div class="corpo-alunodados">
+                        <h3>Outros Documentos</h3>
+                        <label>RG do Aluno: </label>
+                        <input type="number" name="rg_pai" placeholder="ex: XXXXXXXXX-XX" required>
+                        <label>Data de Expedição: </label>
+                        <input type="date" name="data_expedicao">
+                        <label>Naturalidade: </label>
+                        <input type="text" name="nat_aluno"><br><br>
+                        <label>NIS: </label>
+                        <input type="number" name="NIS_aluno">
+                        <label>Cartão do SUS: </label>
+                        <input type="number" name="cs_aluno">
+                        <label>Participa do Programa Bolsa Familia?</label>
+                        <input type="radio" name="bolsafamilia" value="S">Sim
+                        <input type="radio" name="bolsafamilia" value="N">Não
+                    </div>
+                    <h3 id="endereco">Endereço</h3>
+                    <div class="corpo-alunoendereco">
+                        <label>Rua: </label>
+                        <input type="text" name="rua">
+                        <label>Número: </label>
+                        <input type="text" name="numero_casa">
+                        <label>Complemento: </label>
+                        <input type="text" name="complemento"><br><br>
+                        <label>Bairro: </label>
+                        <input type="text" name="bairro">
+                        <label>Cidade: </label>
+                        <input type="text" name="cidade">
+                        <label>Cep: </label>
+                        <input type="text" name="cep">
+                        <button type="submit">Busca CEP</button><br>
+                    
+                    </div>
+                    <h3 id="contato">Informações de Contato</h3>
+                    <div class="corpo-alunocontato">
+                        <div id="contato1">
+                            <label>Contato 1:</label>
+                            <input  type="tel" name="contato">
+                            <select class="telefone" >
+                                <option value="celular">Celular</option>
+                                <option value="fixo">Fixo</option>
+                                <option value="fax">Fax</option>
+                                <option value="Voip">Voip</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div id="contato2">
+                            <label>Contato 2:</label>
+                            <input  type="tel" name="contato">
+                            <select class="telefone">
+                                <option value="celular">Celular</option>
+                                <option value="fixo">Fixo</option>
+                                <option value="fax">Fax</option>
+                                <option value="Voip">Voip</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div id="contato3">
+                            <label>Contato 3:</label>
+                            <input  type="tel" name="contato">
+                            <select class="telefone">
+                                <option value="celular">Celular</option>
+                                <option value="fixo">Fixo</option>
+                                <option value="fax">Fax</option>
+                                <option value="Voip">Voip</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div><br><br>
+                        <div id="email_aluno">
+                            <label>E-mail: </label>
+                            <input type="email" name="email">
+                        </div>
+                        <button class="btn-gravar" name="btn-gravar" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="rodape">
+            
+            </div>
+        </article>
+    </section>  
+</body>
+</html>
